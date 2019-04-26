@@ -1,4 +1,6 @@
-# TriviaGame An Animal trivia Game made with javascript/jquery and uses timers and an array of objects. The UI makes things pretty with html, css, bootstrap and googlefonts.
+# TriviaGame 
+
+An Animal trivia Game made with javascript/jquery and uses timers and an array of objects. The UI makes things pretty with html, css, bootstrap and googlefonts.
 
 This is a 10 question quiz about animals. The player clicks start to begin and has 1 minute to answer 10 multiple choice questions about animals.
 
