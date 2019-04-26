@@ -4,7 +4,7 @@ body {
     padding: 30px;
 }
 
-#header, #question-row {
+#header, #question-row, #answer-row {
     background-color: #CCAA77;
     border-style: groove;
     margin: auto;
@@ -20,7 +20,10 @@ body {
 }
 
 img {
-    width: 300px; 
+    width: 90%; 
 }
 
+#answer-row {
+    text-align: left;
+}
 
