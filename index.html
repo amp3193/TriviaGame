@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Animal Trivia</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="shadow row rounded" id="header">
             <div class="col-sm-8">
-                <h2 class="title">Animal Trivia</h2>
-                <button type="button" class="btn btn-success" id="start">Start</button>
+                <h1 class="title">Animal Trivia</h1>
+                <button type="button" class="w-25 btn btn-success" id="start">Start</button>
             </div>
             <div class="col-sm-4">
-                <h4 class="timer">Time Left: </h4>
+                <h4>Time Left: </h4>
+                <h4 class="timer">0.00</h4>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4"></div>
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
             <div class="col-sm-8">
-                <div class="question" id="question3"> Question Text goes Here
+                <div class="question" id="question"> Question Text goes Here. What will this look like with longer
+                    questions?
                     <div class="custom-control custom-radio">
                         <input type="radio" id="a" name="customRadio" class="custom-control-input">
                         <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
@@ -45,6 +50,257 @@
                             radio</label>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+        </div>
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow row rounded" id="question-row">
+            <div class="col-sm-8">
+                <div class="question" id="question"> Question Text goes Here
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="a" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="b" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="c" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="d" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom
+                            radio</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div id="image"> <img src="assets/images/animal-collage.jpg" alt="animals"> </div>
             </div>
         </div>
     </div>

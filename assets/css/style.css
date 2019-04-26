@@ -1,0 +1,26 @@
+body {
+    background-color: #00AA88;
+    font-family: 'Permanent Marker', cursive;
+    padding: 30px;
+}
+
+#header, #question-row {
+    background-color: #CCAA77;
+    border-style: groove;
+    margin: auto;
+    padding: 20px;
+}
+
+#header {
+    text-align: center;
+}
+
+#question-row {
+    text-align: left;
+}
+
+img {
+    width: 300px; 
+}
+
+
