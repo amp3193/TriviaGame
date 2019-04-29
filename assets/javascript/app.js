@@ -1,103 +1,194 @@
 let questionArr = [
     {
-        number: 1,
-        question: "The Blue Whale is the largest animal on the planet, but how big is its heart? is it comparable to",
+        question: "The Blue Whale is the largest animal on the planet, but how big is its heart? is it comparable to...",
         imgSrc: "assets/images/whale.jpg",
-        choiceA: "A) a domestic washing machine",
-        choiceB: "B) a small car",
-        choiceC: "C) a delivery truck",
-        choiceD: "D) a 1 gallon jug",
-        answer: "B) a small car",
+        options: [
+            "a domestic washing machine",
+            "a small car",
+            "a delivery truck",
+            "a 1 gallon jug",
+        ],
+        answer: 1, //"B) a small car"
     },
     {
-        number: 2,
         question: "The Bandicoot is native to which continent?",
         imgSrc: "assets/images/bandicoot.jpg",
-        choiceA: "A) Australia",
-        choiceB: "B) Africa",
-        choiceC: "C) South America",
-        choiceD: "D) Asia",
-        answer: "A) Australia",
+        options: [
+            "Australia",
+            "Africa",
+            "South America",
+            "Asia",
+        ],
+        answer: 0, //"A) Australia",
     },
     {
-        number: 3,
         question: "What would be an average weight range for an Asian Elephant?",
         imgSrc: "assets/images/elephant.jpg",
-        choiceA: "A) 2000lbs",
-        choiceB: "B) 5000lbs",
-        choiceC: "C) 8000lbs",
-        choiceD: "D) 12000lbs",
-        answer: "C) 8000lbs",
+        options: [
+            "2000lbs",
+            "5000lbs",
+            "8000lbs",
+            "12000lbs",
+        ],
+        answer: 2, //"C) 8000lbs",
     },
     {
-        number: 4,
         question: "Some Flamingos are coloured pink because of what?",
         imgSrc: "assets/images/flamingo.jpg",
-        choiceA: "A) eating shrimp",
-        choiceB: "B) eating algea",
-        choiceC: "C) eating hibiscus flowers",
-        choiceD: "D) eating plankton",
-        answer: "A) eating shrimp",
+        options: [
+            "eating shrimp",
+            "eating algea",
+            "eating hibiscus flowers",
+            "eating plankton",
+        ],
+        answer: 0, //"A) eating shrimp",
     },
     {
-        number: 5,
         question: "What is the color of a polar bear’s skin?",
         imgSrc: "assets/images/polarbear.jpg",
-        choiceA: "A) white",
-        choiceB: "B) brown",
-        choiceC: "C) gray",
-        choiceD: "D) black",
-        answer: "D) black",
+        options: [
+            "white",
+            "brown",
+            "gray",
+            "black",
+        ],
+        answer: 3, //"D) black",
     },
     {
-        number: 6,
         question: "How many hearts does an octopus have?",
         imgSrc: "assets/images/octopus.jpg",
-        choiceA: "A) 3",
-        choiceB: "B) 1",
-        choiceC: "C) 4",
-        choiceD: "D) 8",
-        answer: "A) 3",
+        options: [
+            "3",
+            "1",
+            "4",
+            "8",
+        ],
+        answer: 0, //"A) 3",
     },
     {
-        number: 7,
         question: "What is the top speed of a Bottle Nosed Dolphin?",
         imgSrc: "assets/images/dolphin.jpg",
-        choiceA: "A) 21mph",
-        choiceB: "B) 26mph",
-        choiceC: "C) 31mph",
-        choiceD: "D) 45mph",
-        answer: "A) 21mph",
+        options: [
+            "21mph",
+            "26mph",
+            "31mph",
+            "45mph",
+        ],
+        answer: 0, //"A) 21mph",
     },
     {
-        number: 8,
         question: "How many species of Bumble Bees are there around the world?",
         imgSrc: "assets/images/bee.jpg",
-        choiceA: "A) 5",
-        choiceB: "B) 25",
-        choiceC: "C) 100",
-        choiceD: "D) 250",
-        answer: "D) 250",
-    },
-    {   
-        number: 9,
-        question: "The Orangutan is native to only 2 islands, one is Borneo, which is the other?",
-        imgSrc: "assets/images/orangutan.jpg",
-        choiceA: "A) Madagascar",
-        choiceB: "B) Sumatra",
-        choiceC: "C) Java",
-        choiceD: "D) Fiji",
-        answer: "B) Sumatra",
+        options: [
+            "5",
+            "25",
+            "100",
+            "250",
+        ],
+        answer: 3, //"D) 250",
     },
     {
-        number: 10,
+        question: "The Orangutan is native to only 2 islands, one is Borneo, which is the other?",
+        imgSrc: "assets/images/orangutan.jpg",
+        options: [
+            "Madagascar",
+            "Sumatra",
+            "Java",
+            "Fiji",
+        ],
+        answer: 1, //"B) Sumatra",
+    },
+    {
         question: "The armadillo has a hard shell as protection against predators, but if it had to escape what is its top speed?",
         imgSrc: "assets/images/armadillo.jpg",
-        choiceA: "A) 4mph",
-        choiceB: "B) 10mph",
-        choiceC: "C) 20mph",
-        choiceD: "D) 30mph",
-        answer: "D) 30mph",
+        options: [
+            "4mph",
+            "10mph",
+            "20mph",
+            "30mph",
+        ],
+        answer: 3, //"D) 30mph",
     }
 ];
 
+let timeDisplay = 0;
+let score = 0;
+
+function initialState() {
+    display();
+}
+
+function start() {
+    
+    loadQuestions();
+    display();
+}
+
+function display() {
+    // TODO do something
+}
+
+
+function loadQuestions() {
+    let html = "";
+    for (let index = 0; index < questionArr.length; index++) {
+        const item = questionArr[index];
+        html += getQuestionHtml(index, item);
+    }
+
+    $("#questionArr").html(html);
+}
+
+function getQuestionHtml(index, item) {
+    return `
+    <div class="shadow row rounded" id="question-row">
+        <div class="col-sm-8">
+            <div class="question"> ${item.question}
+                <form>
+                    <input type="radio" id="${index}.0" name="question${index}">${item.options[0]}<br>
+                    <input type="radio" id="${index}.1" name="question${index}">${item.options[1]}<br>
+                    <input type="radio" id="${index}.2" name="question${index}">${item.options[2]}<br>
+                    <input type="radio" id="${index}.3" name="question${index}">${item.options[3]}<br>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div id="image"> <img src="${item.imgSrc}" alt="animals"> </div>
+        </div>
+    </div>`
+}
+
+function checkAnswers() {
+    let correctCount = 0;
+    let incorrectCount = 0;
+    for (let index = 0; index < questionArr.length; index++) {
+        const item = questionArr[index];
+        let correctAnswerElement = document.getElementById(`${index}.${item.answer}`);
+        if (correctAnswerElement.checked) {
+            correctCount++;
+        } else {
+            incorrectCount++;
+        }
+    }
+
+    console.log("correctCount:   " + correctCount)
+    console.log("incorrectCount: " + incorrectCount)
+
+    // TODO do something with the numbers
+
+    //timer will call check answers
+
+    //timer runs out/submit html for questions is hidden **** set 
+    $("#questionArr").html("");
+
+    //add a div for submit button same thing as above
+
+    //return the answer row from js
+    //$("#").html("");
+}
+
+$("#start").on('click', start);
+
+$("#submit").on('click', checkAnswers);
+
+initialState();
