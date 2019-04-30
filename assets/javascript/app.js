@@ -111,23 +111,16 @@ let questionArr = [
     }
 ];
 
-let timeDisplay = 0;
+const timeAmount = 60;
+let timeDisplay;
+let countdown; 
 let score = 0;
 
-function initialState() {
-    display();
-}
-
 function start() {
-    
+    $("#answer-row-show").html("");
     loadQuestions();
-    display();
+    runTimer();
 }
-
-function display() {
-    // TODO do something
-}
-
 
 function loadQuestions() {
     let html = "";
@@ -137,6 +130,8 @@ function loadQuestions() {
     }
 
     $("#questionArr").html(html);
+    $("#submitBtn").html(getSubmit());
+    $("#submit").on('click', checkAnswers);
 }
 
 function getQuestionHtml(index, item) {
@@ -158,6 +153,11 @@ function getQuestionHtml(index, item) {
     </div>`
 }
 
+function getSubmit() {
+    return `    
+    <div id="submitdiv"><button type="button" class="btn btn-success" id="submit">Submit Answers</button></div>`
+}
+
 function checkAnswers() {
     let correctCount = 0;
     let incorrectCount = 0;
@@ -170,25 +170,48 @@ function checkAnswers() {
             incorrectCount++;
         }
     }
-
+   
     console.log("correctCount:   " + correctCount)
     console.log("incorrectCount: " + incorrectCount)
 
-    // TODO do something with the numbers
-
-    //timer will call check answers
-
-    //timer runs out/submit html for questions is hidden **** set 
+    scoreNum = correctCount * 10;
+    $("#answer-row-show").html(getAnswerRow(scoreNum, correctCount, incorrectCount));
     $("#questionArr").html("");
-
-    //add a div for submit button same thing as above
-
-    //return the answer row from js
-    //$("#").html("");
+    $("#submitBtn").html("");
+    clearInterval(countdown);
 }
+
+function getAnswerRow(scoreNum, correctCount, incorrectCount) {
+    return `<div class="shadow row rounded" id="answer-row">
+    <div class="col-sm-4">
+        <h4 class=score">Your Score: </h4>
+        <h4 class="scoreNum">${scoreNum}</h4>
+    </div>
+    <div class="col-sm-8">
+        <div class="correct">You had ${correctCount} correct answers.</div>
+        <div class="wrong">You had ${incorrectCount} incorrect answers.</div>
+    </div>
+    </div>`
+}
+
+function runTimer() {
+    clearInterval(countdown);
+    timeDisplay = timeAmount;
+    countdown = setInterval(decrement, 1000);
+    $(".timer").text(timeDisplay);  
+  }
+
+function decrement() {
+    timeDisplay--;
+    $(".timer").text(timeDisplay);
+    if (timeDisplay === 0) {
+        checkAnswers();
+        console.log("time is up")
+    }
+  }
+
+
 
 $("#start").on('click', start);
 
-$("#submit").on('click', checkAnswers);
 
-initialState();
